@@ -1,13 +1,101 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --dark: #101315;
+  --light: #eeeeee;
+  --gradient: linear-gradient(10deg, #ffaa00, #ff6a00);
+  --gradient2: linear-gradient(15deg, #04ea00, #00d17d);
+  --gradient3: linear-gradient(15deg, #b648ff, #ef5dff);
+  --gradient4: linear-gradient(15deg, #0080ff, #234a74);
+  --gradient5: linear-gradient(15deg, #345374 , #194472);
+  font-size: 1rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: var(--gradient);
 }
+
+h1{
+  text-align: center;
+ font-family: "Bitcount Grid Single", system-ui;
+  font-optical-sizing: auto;
+  font-style: normal;
+  }
+
+p{
+  text-align: center;
+ font-family: "Bitcount Grid Single", system-ui;
+  font-optical-sizing: auto;
+  font-style: normal;
+  }
+
+
+.button-group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bitcount Grid Single", system-ui;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* ensure it's above other elements */
+}
+
+
+
+
+.modal {
+  position: relative;
+  width: clamp(50%, 700px, 90%);
+  max-height: 80vh;         /* limit height to viewport */
+  overflow-y: auto;         /* enables scroll if needed */
+  background: var(--gradient4);
+  margin: auto;
+  padding: 0 2rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.choice{
+  text-align: center;
+  width: 100px;
+  padding: 50px;
+  margin: 50px;
+  /*background-image: var(--gradient3);*/
+  position: relative;
+  background-color: rgba(255, 255, 255,0.1); /* thin transparent bar */
+ font-family: "Bitcount Grid Single", system-ui;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.gameHeader{
+  margin-top: 1rem;
+}
+
+.score{
+  text-align: center;
+ font-family: "Bitcount Grid Single", system-ui;
+  font-optical-sizing: auto;
+  font-style: normal;
+  }
