@@ -46,35 +46,6 @@ p{
   font-style: normal;
 }
 
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000; /* ensure it's above other elements */
-}
-
-
-
-
-.modal {
-  position: relative;
-  width: clamp(50%, 700px, 90%);
-  max-height: 80vh;         /* limit height to viewport */
-  overflow-y: auto;         /* enables scroll if needed */
-  background: var(--gradient4);
-  margin: auto;
-  padding: 0 2rem;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 .choice{
   text-align: center;
@@ -99,3 +70,52 @@ p{
   font-optical-sizing: auto;
   font-style: normal;
   }
+
+
+  .backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.modal-window{
+ position: relative;
+  width: clamp(600px, 50%, 1200px);
+  overflow-y: auto;
+
+  background: var(--gradient); /* solid background for clarity */
+  margin: auto;
+  padding: 2rem;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  font-family: "Bitcount Grid Single", system-ui;
+
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  background: #ff6a00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+
+  cursor: pointer;
+  font-family: "Bitcount Grid Single", system-ui;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}

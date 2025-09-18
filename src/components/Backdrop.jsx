@@ -1,0 +1,30 @@
+// import { motion } from "framer-motion";
+// import "../index.css";
+
+// const Backdrop = ({ children, onClick }) => {
+//   return (
+//     <motion.div
+//       className="backdrop"
+//       onClick={onClick}
+//       initial={{ opacity: 0 }}
+//       animate={{ opacity: 1 }}
+//       exit={{ opacity: 0 }}
+//     >
+//       {children}
+//     </motion.div>
+//   );
+// };
+// export default Backdrop;
+
+import React from "react";
+import "../index.css";
+
+const Backdrop = ({ children, onClick }) => {
+  return (
+    <div className="backdrop" onClick={onClick}>
+      {children}
+    </div>
+  );
+};
+
+export default Backdrop;
